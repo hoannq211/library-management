@@ -205,13 +205,13 @@
               </li>
 
               <li class="nav-item">
-                   <a class="nav-link menu-arrow" href="#sidebarRoles" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRoles">
+                   <a class="nav-link menu-arrow" href="#sidebarUsers" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarUsers">
                         <span class="nav-icon">
-                             <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
+                             <iconify-icon icon="solar:user-bold-duotone"></iconify-icon>
                         </span>
-                        <span class="nav-text"> Roles </span>
+                        <span class="nav-text"> Nhân Viên </span>
                    </a>
-                   <div class="collapse" id="sidebarRoles">
+                   <div class="collapse" id="sidebarUsers">
                         <ul class="nav sub-navbar-nav">
                              <ul class="nav sub-navbar-nav">
                                   <li class="sub-nav-item">
@@ -219,6 +219,26 @@
                                   </li>
                                   <li class="sub-nav-item">
                                        <a class="sub-nav-link" href="{{ route('admin.users.create') }}">Create</a>
+                                  </li>
+                             </ul>
+                        </ul>
+                   </div>
+              </li>
+              <li class="nav-item">
+                   <a class="nav-link menu-arrow" href="#sidebarRoles" data-bs-toggle="collapse" role="button" aria-expanded="false" aria-controls="sidebarRoles">
+                        <span class="nav-icon">
+                             <iconify-icon icon="solar:user-speak-rounded-bold-duotone"></iconify-icon>
+                        </span>
+                        <span class="nav-text"> Quyền hạn </span>
+                   </a>
+                   <div class="collapse" id="sidebarRoles">
+                        <ul class="nav sub-navbar-nav">
+                             <ul class="nav sub-navbar-nav">
+                                  <li class="sub-nav-item">
+                                       <a class="sub-nav-link" href="{{ route('admin.roles.index') }}">List</a>
+                                  </li>
+                                  <li class="sub-nav-item">
+                                       <a class="sub-nav-link" href="{{ route('admin.roles.create') }}">Create</a>
                                   </li>
                              </ul>
                         </ul>
@@ -239,16 +259,13 @@
                         <span class="nav-icon">
                              <iconify-icon icon="solar:users-group-two-rounded-bold-duotone"></iconify-icon>
                         </span>
-                        <span class="nav-text"> Customers </span>
+                        <span class="nav-text"> Người Dùng </span>
                    </a>
                    <div class="collapse" id="sidebarCustomers">
                         <ul class="nav sub-navbar-nav">
 
                              <li class="sub-nav-item">
-                                  <a class="sub-nav-link" href="customer-list.html">List</a>
-                             </li>
-                             <li class="sub-nav-item">
-                                  <a class="sub-nav-link" href="customer-detail.html">Details</a>
+                                  <a class="sub-nav-link" href="{{ route('admin.users.listMember') }}">List</a>
                              </li>
                         </ul>
                    </div>

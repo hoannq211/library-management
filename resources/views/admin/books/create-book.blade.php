@@ -12,11 +12,7 @@
             @endif
             @if ($errors->any())
                 <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
+                    Có lỗi sảy ra
                 </div>
             @endif
             <div class="card">
@@ -25,7 +21,7 @@
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('admin.books.store') }}" enctype="multipart/form-data">
-                        @csrf <!-- Token CSRF -->
+                        @csrf 
                     
                         <div class="row">
                             <div class="col-lg-6">

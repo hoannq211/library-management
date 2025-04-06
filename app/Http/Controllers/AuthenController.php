@@ -33,7 +33,7 @@ class AuthenController extends Controller
                     'success' => 'Đăng nhập thành công'
                 ]);
             } else {
-                return redirect()->route('client.dashboard')->with([
+                return redirect()->route('client.home')->with([
                     'success' => 'Đăng nhập thành công'
                 ]);
             }

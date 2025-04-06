@@ -183,7 +183,7 @@ class BookController extends Controller
                 $file = $book->uploadFiles()->find($fileId);
                 if ($file) {
                     Storage::disk('public')->delete($file->file_path);
-                    $file->forceDelete();
+                    $file->delete();
                 }
             }
         }
@@ -229,7 +229,7 @@ class BookController extends Controller
 
         foreach ($book->uploadFiles as $file) {
             Storage::disk('public')->delete($file->file_path);
-            $file->forceDelete();
+            $file->delete();
         }
 
         $book->forceDelete();
