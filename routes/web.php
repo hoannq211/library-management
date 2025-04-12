@@ -9,7 +9,7 @@ use App\Http\Controllers\admin\UserController;
 use App\Http\Controllers\Client\HomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::prefix('client')->as('client.')->group(function () {
+Route::prefix('/')->as('client.')->group(function () {
     Route::get('/', [HomeController::class, 'index'])->name('home');
 });
 
@@ -17,7 +17,7 @@ Route::get('/login', [AuthenController::class, 'login'])->name('auth.login');
 Route::post('/login', [AuthenController::class, 'postLogin']);
 Route::get('/register', [AuthenController::class, 'register'])->name('auth.register');
 Route::post('/register', [AuthenController::class, 'postRegister']);
-Route::get('/logout', [AuthenController::class, 'logout'])->name('auth.logout');
+Route::post('/logout', [AuthenController::class, 'logout'])->name('auth.logout');
 
 Route::prefix('admin')->as('admin.')->middleware('check.admin')->group(function () {
     //dashboard
@@ -42,4 +42,7 @@ Route::prefix('admin')->as('admin.')->middleware('check.admin')->group(function 
     Route::delete('books/{id}/force-delete', [BookController::class, 'forceDelete'])->name('books.forceDelete');
     //Category
     Route::resource('categories', CategoryController::class)->names('categories');
+    Route::get('categories-archive', [CategoryController::class, 'listCategoryArchive'])->name('categories.archive');
+    Route::post('categories/{id}/restore', [CategoryController::class, 'restore'])->name('categories.restore');
+    Route::delete('categories/{id}/force-delete', [CategoryController::class, 'forceDelete'])->name('categories.forceDelete');
 });

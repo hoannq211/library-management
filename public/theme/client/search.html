@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm kiếm nâng cao - Thư viện sách</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Thư viện sách</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="books.html">Tất cả sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="search.html">Tìm kiếm nâng cao</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-light me-2">Đăng nhập</a>
+                    <a href="register.html" class="btn btn-light">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Advanced Search Section -->
+    <section class="advanced-search-section py-5">
+        <div class="container">
+            <h1 class="mb-4">Tìm kiếm nâng cao</h1>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <form class="search-form">
+                                <div class="mb-3">
+                                    <label for="title" class="form-label">Tên sách</label>
+                                    <input type="text" class="form-control" id="title" placeholder="Nhập tên sách">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="author" class="form-label">Tác giả</label>
+                                    <input type="text" class="form-control" id="author" placeholder="Nhập tên tác giả">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">Thể loại</label>
+                                    <select class="form-select" id="category">
+                                        <option value="">Tất cả thể loại</option>
+                                        <option value="fiction">Tiểu thuyết</option>
+                                        <option value="science">Khoa học</option>
+                                        <option value="history">Lịch sử</option>
+                                        <option value="business">Kinh doanh</option>
+                                        <option value="art">Nghệ thuật</option>
+                                        <option value="technology">Công nghệ</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="publisher" class="form-label">Nhà xuất bản</label>
+                                    <input type="text" class="form-control" id="publisher" placeholder="Nhập tên nhà xuất bản">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="year" class="form-label">Năm xuất bản</label>
+                                    <div class="row">
+                                        <div class="col">
+                                            <input type="number" class="form-control" id="year-from" placeholder="Từ năm">
+                                        </div>
+                                        <div class="col">
+                                            <input type="number" class="form-control" id="year-to" placeholder="Đến năm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="language" class="form-label">Ngôn ngữ</label>
+                                    <select class="form-select" id="language">
+                                        <option value="">Tất cả ngôn ngữ</option>
+                                        <option value="vietnamese">Tiếng Việt</option>
+                                        <option value="english">Tiếng Anh</option>
+                                        <option value="french">Tiếng Pháp</option>
+                                        <option value="chinese">Tiếng Trung</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="availability" class="form-label">Tình trạng</label>
+                                    <select class="form-select" id="availability">
+                                        <option value="">Tất cả</option>
+                                        <option value="available">Có sẵn</option>
+                                        <option value="borrowed">Đã mượn</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="rating" class="form-label">Đánh giá</label>
+                                    <select class="form-select" id="rating">
+                                        <option value="">Tất cả</option>
+                                        <option value="5">5 sao</option>
+                                        <option value="4">4 sao trở lên</option>
+                                        <option value="3">3 sao trở lên</option>
+                                        <option value="2">2 sao trở lên</option>
+                                        <option value="1">1 sao trở lên</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100">Tìm kiếm</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <!-- Search Results -->
+                    <div class="search-results">
+                        <h2 class="mb-4">Kết quả tìm kiếm</h2>
+                        <div class="row">
+                            <!-- Result 1 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="images/book1.jpg" class="img-fluid rounded-start h-100" alt="Sách 1">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tên sách 1</h5>
+                                                <p class="card-text">Tác giả: Tác giả 1</p>
+                                                <p class="card-text">Thể loại: Tiểu thuyết</p>
+                                                <p class="card-text text-success">Có sẵn</p>
+                                                <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Result 2 -->
+                            <div class="col-md-6 mb-4">
+                                <div class="card h-100">
+                                    <div class="row g-0">
+                                        <div class="col-md-4">
+                                            <img src="images/book2.jpg" class="img-fluid rounded-start h-100" alt="Sách 2">
+                                        </div>
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Tên sách 2</h5>
+                                                <p class="card-text">Tác giả: Tác giả 2</p>
+                                                <p class="card-text">Thể loại: Khoa học</p>
+                                                <p class="card-text text-danger">Đã mượn</p>
+                                                <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Add more results as needed -->
+                        </div>
+                        <!-- Pagination -->
+                        <nav aria-label="Page navigation" class="mt-4">
+                            <ul class="pagination justify-content-center">
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#" tabindex="-1">Trước</a>
+                                </li>
+                                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                <li class="page-item">
+                                    <a class="page-link" href="#">Sau</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Thông tin liên hệ</h5>
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+                    <p>Email: info@thuviensach.com</p>
+                    <p>Điện thoại: (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">Giới thiệu</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                        <li><a href="terms.html" class="text-light">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <div class="social-links">
+                        <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-light me-2"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Thư viện sách. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

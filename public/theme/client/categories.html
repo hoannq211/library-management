@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thể loại sách - Thư viện sách</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Thư viện sách</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="books.html">Tất cả sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="categories.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Tìm kiếm nâng cao</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Đăng nhập</a>
+                    <a href="register.html" class="btn btn-primary">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-content">
+                    <h1 class="hero-title">Khám phá thế giới sách</h1>
+                    <p class="hero-subtitle">Tìm kiếm và khám phá hàng ngàn đầu sách đa dạng theo thể loại</p>
+                    <a href="#categories" class="btn btn-light btn-lg">Xem thể loại</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/hero-books.png" alt="Books" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <h2 class="text-center mb-5">Thể loại sách</h2>
+            <div class="row">
+                <!-- Fiction Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-book-open category-icon"></i>
+                        <h3>Tiểu thuyết</h3>
+                        <p>Khám phá thế giới hư cấu với những câu chuyện hấp dẫn</p>
+                        <a href="books.html?category=fiction" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+                <!-- Science Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-flask category-icon"></i>
+                        <h3>Khoa học</h3>
+                        <p>Tìm hiểu về thế giới tự nhiên và công nghệ hiện đại</p>
+                        <a href="books.html?category=science" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+                <!-- History Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-landmark category-icon"></i>
+                        <h3>Lịch sử</h3>
+                        <p>Khám phá quá khứ và những sự kiện lịch sử quan trọng</p>
+                        <a href="books.html?category=history" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+                <!-- Business Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-chart-line category-icon"></i>
+                        <h3>Kinh doanh</h3>
+                        <p>Học hỏi về quản lý, tài chính và phát triển doanh nghiệp</p>
+                        <a href="books.html?category=business" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+                <!-- Art Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-palette category-icon"></i>
+                        <h3>Nghệ thuật</h3>
+                        <p>Khám phá thế giới nghệ thuật và sáng tạo</p>
+                        <a href="books.html?category=art" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+                <!-- Technology Category -->
+                <div class="col-md-4 mb-4">
+                    <div class="category-card">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Công nghệ</h3>
+                        <p>Cập nhật kiến thức về công nghệ và lập trình</p>
+                        <a href="books.html?category=technology" class="btn btn-primary">Xem sách</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Books Section -->
+    <section class="featured-books py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Sách nổi bật</h2>
+            <div class="row">
+                <!-- Book Card 1 -->
+                <div class="col-md-3 mb-4">
+                    <div class="book-card">
+                        <img src="images/book1.jpg" class="card-img-top" alt="Sách 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên sách 1</h5>
+                            <p class="card-text">Tác giả: Tác giả 1</p>
+                            <p class="card-text"><small class="text-muted">Thể loại: Tiểu thuyết</small></p>
+                            <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book Card 2 -->
+                <div class="col-md-3 mb-4">
+                    <div class="book-card">
+                        <img src="images/book2.jpg" class="card-img-top" alt="Sách 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên sách 2</h5>
+                            <p class="card-text">Tác giả: Tác giả 2</p>
+                            <p class="card-text"><small class="text-muted">Thể loại: Khoa học</small></p>
+                            <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book Card 3 -->
+                <div class="col-md-3 mb-4">
+                    <div class="book-card">
+                        <img src="images/book3.jpg" class="card-img-top" alt="Sách 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên sách 3</h5>
+                            <p class="card-text">Tác giả: Tác giả 3</p>
+                            <p class="card-text"><small class="text-muted">Thể loại: Lịch sử</small></p>
+                            <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Book Card 4 -->
+                <div class="col-md-3 mb-4">
+                    <div class="book-card">
+                        <img src="images/book4.jpg" class="card-img-top" alt="Sách 4">
+                        <div class="card-body">
+                            <h5 class="card-title">Tên sách 4</h5>
+                            <p class="card-text">Tác giả: Tác giả 4</p>
+                            <p class="card-text"><small class="text-muted">Thể loại: Kinh doanh</small></p>
+                            <a href="book-detail.html" class="btn btn-primary">Xem chi tiết</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Thông tin liên hệ</h5>
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+                    <p>Email: info@thuviensach.com</p>
+                    <p>Điện thoại: (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">Giới thiệu</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                        <li><a href="terms.html" class="text-light">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Thư viện sách. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

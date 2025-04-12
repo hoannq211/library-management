@@ -63,10 +63,13 @@
                    <div class="collapse" id="sidebarCategory">
                         <ul class="nav sub-navbar-nav">
                              <li class="sub-nav-item">
-                                  <a class="sub-nav-link" href="{{ route('admin.categories.index') }}">List</a>
+                                  <a class="sub-nav-link" href="{{ route('admin.categories.index') }}">Danh sách</a>
                              </li>
                              <li class="sub-nav-item">
-                                  <a class="sub-nav-link" href="{{ route('admin.categories.create') }}">Create</a>
+                                  <a class="sub-nav-link" href="{{ route('admin.categories.create') }}">Thêm Mới</a>
+                             </li>
+                             <li class="sub-nav-item">
+                                  <a class="sub-nav-link" href="{{ route('admin.categories.archive') }}">Danh Sách Lưu Trữ</a>
                              </li>
                         </ul>
                    </div>

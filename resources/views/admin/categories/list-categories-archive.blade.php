@@ -64,9 +64,6 @@
                                 <option value="30" {{ request('per_page') == 30 ? 'selected' : '' }}>30</option>
                             </select>
                         </div>
-                        <a href="{{ route('admin.books.create') }}" class="btn btn-sm btn-primary">
-                            Thêm Sản phẩm
-                        </a>
                         <a href="{{ route('admin.categories.create') }}" class="btn btn-sm btn-primary">
                             Thêm Danh Mục
                         </a>
@@ -90,7 +87,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($categories as $category)
+                                    @foreach ($categoryArchive as $category)
                                         <tr>
                                             <td>
                                                 <div class="form-check">
@@ -117,10 +114,17 @@
                                                     <a href="#!" class="btn btn-light btn-sm"><iconify-icon
                                                             icon="solar:eye-broken"
                                                             class="align-middle fs-18"></iconify-icon></a>
-                                                    <a href="{{ route('admin.categories.edit', $category->id) }}" class="btn btn-soft-primary btn-sm"><iconify-icon
-                                                            icon="solar:pen-2-broken"
-                                                            class="align-middle fs-18"></iconify-icon></a>
-                                                    <form action="{{ route('admin.categories.destroy', $category->id) }}"
+                                                    <form action="{{ route('admin.categories.restore', $category->id) }}"
+                                                        method="POST"
+                                                        onsubmit="return confirm('Bạn có chắc muốn khôi phục không')">
+                                                        @csrf
+                                                        <button type="submit" class="btn btn-soft-primary btn-sm">
+                                                            <iconify-icon icon="solar:pen-2-broken"
+                                                                class="align-middle fs-18"></iconify-icon>
+                                                        </button>
+                                                    </form>
+                                                    <form
+                                                        action="{{ route('admin.categories.forceDelete', $category->id) }}"
                                                         method="POST"
                                                         onsubmit="return confirm('Bạn có chắc muốn xóa hay không')">
                                                         @csrf
@@ -143,7 +147,7 @@
                     </div>
                     <div class="card-footer border-top">
                         <nav aria-label="Page navigation example">
-                            {{ $categories->links('pagination::bootstrap-5') }}
+                            {{ $categoryArchive->links('pagination::bootstrap-5') }}
                         </nav>
                     </div>
                 </div>

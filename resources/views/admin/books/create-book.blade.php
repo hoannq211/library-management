@@ -6,7 +6,16 @@
 
 <div class="container-xxl">
     <div class="row">
-        <div class="col-xl-12 col-lg-12">
+        <div class="col-xl-3 col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="bg-light text-center rounded bg-light">
+                        <img src="assets/images/product/p-1.png" alt="" class="avatar-xxl">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-9 col-lg-8">
             @if (session('success'))
                     <span class="alert alert-success d-block mt-2">{{ session('success') }}</span>
             @endif

@@ -95,14 +95,14 @@ class UserService
         if (isset($data['roles'])) {
             $user->roles()->sync($data['roles']);
         }
-        if (isset($data['avatar'])) {
-            if ($user->uploadFiles()->where('file_type', 'image')->exists()) {
-                $oldAvatar = $user->uploadFiles()->where('file_type', 'image')->first();
+        if (!empty($data['avatar'])) {
+            $oldAvatar = $user->uploadFiles()->where('file_type', 'image')->first();
+
+            if ($oldAvatar) {
                 Storage::disk('public')->delete($oldAvatar->file_path);
-                $oldAvatar->forceDelete();
+                $oldAvatar->delete();
             }
             $filePath = $data['avatar']->store('upload/avatars', 'public');
-            $data['avatar'] = $filePath;
 
             $user->uploadFiles()->create([
                 'file_path' => $filePath,
@@ -118,6 +118,13 @@ class UserService
     // Xóa tài khoản người dùng
     public function deleteUser($id)
     {
+        $user = $this->getUserById($id);
+        $oldAvatar = $user->uploadFiles()->where('file_type', 'image')->first();
+
+            if ($oldAvatar) {
+                Storage::disk('public')->delete($oldAvatar->file_path);
+                $oldAvatar->delete();
+            }
         if (Auth::id() === $id) {
             throw new \Exception('Bạn không thể xóa chính mình!');
         }

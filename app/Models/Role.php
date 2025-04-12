@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
+    const DEFAULT_ROLE = 'Người Dùng';
+
     /** @use HasFactory<\Database\Factories\RoleFactory> */
     use HasFactory;
     protected $table = 'roles';

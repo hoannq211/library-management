@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ - Thư viện sách</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Thư viện sách</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="books.html">Tất cả sách</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="categories.html">Thể loại</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="search.html">Tìm kiếm nâng cao</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Liên hệ</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="login.html" class="btn btn-outline-primary me-2">Đăng nhập</a>
+                    <a href="register.html" class="btn btn-primary">Đăng ký</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 hero-content">
+                    <h1 class="hero-title">Liên hệ với chúng tôi</h1>
+                    <p class="hero-subtitle">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/contact-hero.png" alt="Contact" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="contact-info">
+                        <h2 class="mb-4">Thông tin liên hệ</h2>
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-map-marker-alt me-3"></i>
+                            <div>
+                                <h5>Địa chỉ</h5>
+                                <p>123 Đường ABC, Quận XYZ, Thành phố Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-phone me-3"></i>
+                            <div>
+                                <h5>Điện thoại</h5>
+                                <p>(123) 456-7890</p>
+                            </div>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <i class="fas fa-envelope me-3"></i>
+                            <div>
+                                <h5>Email</h5>
+                                <p>info@thuviensach.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock me-3"></i>
+                            <div>
+                                <h5>Giờ làm việc</h5>
+                                <p>Thứ 2 - Thứ 6: 8:00 - 18:00</p>
+                                <p>Thứ 7: 8:00 - 12:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h2 class="mb-4">Gửi tin nhắn cho chúng tôi</h2>
+                        <form>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Họ và tên</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="subject" class="form-label">Tiêu đề</label>
+                                <input type="text" class="form-control" id="subject" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Nội dung</label>
+                                <textarea class="form-control" id="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Gửi tin nhắn</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container-fluid p-0">
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.424314981303!2d106.6999923152608!3d10.77700899231567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f46f7b8d0d9%3A0x7c1e3c6e3c6e3c6e!2s123%20ABC%20Street!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Câu hỏi thường gặp</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                            Làm thế nào để đăng ký thẻ thư viện?
+                        </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Bạn có thể đăng ký thẻ thư viện bằng cách đến trực tiếp thư viện hoặc đăng ký trực tuyến trên website của chúng tôi. Bạn cần mang theo CMND/CCCD và một ảnh 3x4.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            Thời gian mượn sách tối đa là bao lâu?
+                        </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Thời gian mượn sách tối đa là 14 ngày. Bạn có thể gia hạn thêm 7 ngày nếu không có người đặt trước.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            Làm thế nào để đặt trước sách?
+                        </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Bạn có thể đặt trước sách thông qua website hoặc ứng dụng di động của thư viện. Khi sách có sẵn, chúng tôi sẽ thông báo cho bạn.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Thông tin liên hệ</h5>
+                    <p>Địa chỉ: 123 Đường ABC, Quận XYZ</p>
+                    <p>Email: info@thuviensach.com</p>
+                    <p>Điện thoại: (123) 456-7890</p>
+                </div>
+                <div class="col-md-4">
+                    <h5>Liên kết nhanh</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="about.html" class="text-light">Giới thiệu</a></li>
+                        <li><a href="contact.html" class="text-light">Liên hệ</a></li>
+                        <li><a href="terms.html" class="text-light">Điều khoản sử dụng</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Theo dõi chúng tôi</h5>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2024 Thư viện sách. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

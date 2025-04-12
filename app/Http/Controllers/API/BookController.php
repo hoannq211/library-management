@@ -101,7 +101,7 @@ class BookController extends Controller
             $book = Book::findOrFail($id);
 
             $data = [
-                'title' => $request->title,
+                'title' => $request->title ?? $book->title,
                 'category_id' => $request->category_id,
                 'author' => $request->author,
                 'publisher' => $request->publisher,
