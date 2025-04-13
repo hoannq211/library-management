@@ -17,6 +17,7 @@
                 <div class="card-body">
                     <form action="{{ route('admin.roles.store') }}" method="POST">
                         @csrf
+                        <input type="hidden" name="can_access_admin" value="1">
                         <div class="row">
                             <div class="col-lg-12">
                                 <div class="mb-3">

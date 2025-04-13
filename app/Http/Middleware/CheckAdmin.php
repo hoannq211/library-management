@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Role;
 use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
@@ -13,9 +14,9 @@ class CheckAdmin
     
     public function handle(Request $request, Closure $next): Response
     {
-        $allowedRoles = ['Admin', 'Editor', 'Quản lý']; 
+        
         $user = User::find(Auth::id());
-        if (Auth::check() && $user->hasAnyRole($allowedRoles)) {
+        if (Auth::check() && $user->roles()->where('can_access_admin', 1)->exists()) {
             return $next($request);
         }
 

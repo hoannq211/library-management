@@ -31,9 +31,10 @@ class RoleController extends Controller
             'name.max' => 'Tên quyền không được dài quá 255 ký tự.',
             'name.unique' => 'Tên quyền đã tồn tại.',
         ]);
-
+        
         Role::create([
-            'name' => $validate['name']
+            'name' => $validate['name'],
+            'can_access_admin' => $request->can_access_admin
         ]);
 
         return redirect()->route('admin.roles.index')

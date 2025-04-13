@@ -39,11 +39,6 @@ class User extends Authenticatable
     public function roles () {
         return $this->belongsToMany(Role::class, 'user_roles');
     }
-
-    public function hasAnyRole(array $roles): bool
-    {
-        return $this->roles()->whereIn('name', $roles)->exists();
-    }
     public function uploadFiles () {
         return $this->morphMany(UploadFile::class, 'target');
     }

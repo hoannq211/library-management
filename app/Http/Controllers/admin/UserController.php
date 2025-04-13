@@ -43,7 +43,7 @@ class UserController extends Controller
      */
     public function create()
     {
-        $roles = Role::all();
+        $roles = Role::where('can_access_admin', '1')->get();
         return view('admin.users.create-user')->with([
             'roles' => $roles
         ]);
@@ -80,7 +80,7 @@ class UserController extends Controller
     public function edit(string $id)
     {
         $user = $this->userService->getUserById($id);
-        $roles = Role::all();
+        $roles = Role::where('can_access_admin', '1')->get();
         return view('admin.users.edit-user')->with([
             'user' => $user,
             'roles' => $roles,
